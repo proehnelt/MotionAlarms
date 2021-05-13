@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/move_back"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:text="Back" />
+
+        <Space
+            android:layout_width="210dp"
+            android:layout_height="match_parent" />
+
+        <Button
+            android:id="@+id/set_move_reminder"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:text="Set" />
+    </TableRow>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="You will be reminded to move every:"
+        android:textSize="24sp" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="41dp" />
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="210dp"
+            android:layout_height="match_parent"
+            android:foregroundGravity="center_horizontal"
+            android:text="Hour(s)"
+            android:textAlignment="center"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:text="Minute(s)"
+            android:textAlignment="center"
+            android:textSize="18sp" />
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="50dp" >
+
+        <Spinner
+            android:id="@+id/move_hour"
+            android:layout_width="210dp"
+            android:layout_height="match_parent"
+            android:entries="@array/move_hours"
+            android:spinnerMode="dropdown" />
+
+        <Spinner
+            android:id="@+id/move_minute"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:entries="@array/move_minutes" />
+
+    </TableRow>
+
+</LinearLayout>

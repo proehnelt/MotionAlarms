@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="60dp" >
+
+        <Button
+            android:id="@+id/alarm_back"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:text="Back" />
+
+        <Space
+            android:layout_width="210dp"
+            android:layout_height="match_parent" />
+
+        <Button
+            android:id="@+id/create_new_alarm"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:text="Create" />
+    </TableRow>
+
+    <CalendarView
+        android:id="@+id/date"
+        android:layout_width="match_parent"
+        android:layout_height="313dp" />
+
+    <TableRow
+        android:layout_width="fill_parent"
+        android:layout_height="50dp">
+
+        <Spinner
+            android:id="@+id/alarm_hour"
+            android:layout_width="160dp"
+            android:layout_height="match_parent"
+            android:entries="@array/alarm_hours" />
+
+        <Spinner
+            android:id="@+id/alarm_minute"
+            android:layout_width="160dp"
+            android:layout_height="match_parent"
+            android:entries="@array/alarm_minutes" />
+
+        <Spinner
+            android:id="@+id/alarm_ampm"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:entries="@array/ampm" />
+
+    </TableRow>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="20dp" />
+
+    <EditText
+        android:id="@+id/alarm_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Optional Message"
+        android:inputType="textPersonName" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="20dp" />
+
+    <CheckBox
+        android:id="@+id/recurring_alarm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Recurring Alarm" />
+
+    <CheckBox
+        android:id="@+id/alarm_use_location"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:checked="true"
+        android:text="Use Location" />
+
+</LinearLayout>
